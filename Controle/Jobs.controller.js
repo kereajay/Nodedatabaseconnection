@@ -17,7 +17,7 @@ const addjob=async (req,res)=>{
 const getjob=async(req,res)=>{
     try{
         console.log(req.query.title)
-    const response=await Jobmodel.find({title:req.query.title})
+    const response=await Jobmodel.find()
     res.json({success:"true",message:"job get successfully",results:response})
     }
     catch(err){
